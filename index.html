@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pricer__container__main">
+      <div class="pricer__text__above">
+        <div class="pricer__main__txt">Simple, traffic-based pricing</div>
+        <div class="pricer__under__txt">
+          Sign-up for our 30-day trial. No credit card required.
+        </div>
+      </div>
+      <div class="pricer__container">
+        <div class="pricer__top">
+          <div class="pricer__top__txt">
+            <div class="pricer__pageviews">
+              <div class="pricer__pageviews__num"></div>
+              <div class="pricer__pageviews__txt">Pageviews</div>
+            </div>
+            <div class="pricer__price__container">
+              <span class="pricer__sign">$</span>
+              <div class="pricer__price">0.00</div>
+              <div class="pricer__timing">/ month</div>
+            </div>
+          </div>
+          <div class="pricer__slider">
+            <input
+              type="range"
+              min="0"
+              max="4"
+              value="0"
+              step="1"
+              class="slider"
+              id="myRange"
+              onchange="sliderVal.oninput();"
+            />
+          </div>
+          <div class="pricer__slider__under__txt">
+            <div class="pricer__billing__txt">Monthly Billing</div>
+            <label class="switch">
+              <input
+                class="switcher"
+                type="checkbox"
+                id="checkbox"
+                onchange="timeChecker(this)"
+                ;
+              />
+              <span class="switcher__slide round"></span>
+            </label>
+            <div class="pricer__billing__txt">
+              Yearly Billing
+              <span class="pricer__discount">25% discount</span>
+            </div>
+          </div>
+          <div class="slider__discount"></div>
+        </div>
+        <div class="pricer__gap"></div>
+        <div class="pricer__bottom">
+          <div class="slider__benefits__txt__container">
+            <div class="slider__benefit__txt">
+              <img src="/images/icon-check.svg" />
+              Unlimited websites
+            </div>
+            <div class="slider__benefit__txt">
+              <img src="/images/icon-check.svg" />
+              100% data ownership
+            </div>
+            <div class="slider__benefit__txt">
+              <img src="/images/icon-check.svg" />
+              Email reports
+            </div>
+          </div>
+          <div class="slider__bottom__btn">Start my trial</div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/eszymanski98">Ernest Szymański</a>.
+    </div>
+    <script src="pricer.js"></script>
+  </body>
+</html>
